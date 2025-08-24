@@ -6,8 +6,8 @@ from pathlib import Path
 from argparse import ArgumentParser
 from torch.utils.data import DataLoader
 
-from MAE.model import mae_vit_base_patch16
-from MAE.data_loader import SubjectEEGDataset
+from model import mae_vit_base_patch16
+from data_loader import SubjectEEGDataset
 
 from sklearn.model_selection import KFold
 from sklearn.metrics import accuracy_score, f1_score, cohen_kappa_score
