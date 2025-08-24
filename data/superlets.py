@@ -1,7 +1,7 @@
 import jax
 import jax.numpy as jnp
 from functools import partial
-from MAE.morlet import wavelet_transform
+from morlet import wavelet_transform
 
 
 @partial(jax.jit, static_argnums=3)
