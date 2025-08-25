@@ -4,11 +4,11 @@
 ## 🚀 Abstract
 Sleep stage classification is critical for diagnosing sleep disorders, but traditional **_polysomnography (PSG)_** is time-consuming and labor-intensive and subject to inter-rater variability, limiting its reliability.
 In this study, we propose a **_self-supervised learning (SSL) framework_** that combines the **_Superlet Transform (SLT)_**, which enables high-resolution time-frequency analysis, with a **_Masked Autoencoder (MAE)_** architecture.
-**_Single-channel EEG signals (i.e., Fpz-Cz)_** from the **_Sleep-EDF dataset_** were transformed into **_Superlet scalograms_** and used as MAE input.
-During training, **_75% of the input patches_** were randomly masked, and reconstruction loss was computed only over the masked regions.
+Single-channel EEG signals (i.e., Fpz-Cz) from the Sleep-EDFX dataset were transformed into Superlet scalograms and used as MAE input.
+During training, 75% of the input patches were randomly masked, and reconstruction loss was computed only over the masked regions.
 The proposed model outperformed those using **_Short-Time Fourier Transform (STFT)_** and **_Continuous Wavelet Transform (CWT)_** inputs across all evaluation metrics—**_Accuracy (ACC): 75.87%, Macro F1 Score (MF1): 63.23%, and Cohen’s Kappa (Kappa): 0.64_**—and exceeded prior SSL methods by up to **_6.6% in ACC_**.
-Reconstruction visualizations further confirmed that key **_EEG patterns_** were effectively recovered despite high masking.
-This study is the **_first to apply Superlet scalograms to MAE_** for EEG representation learning, demonstrating its potential for **_accurate sleep staging_** from unlabeled data.
+Reconstruction visualizations further confirmed that key EEG patterns were effectively recovered despite high masking.
+This study is the **_first to apply Superlet scalograms to MAE_** for EEG representation learning, demonstrating its potential for accurate sleep staging from unlabeled data.
 
 
 ## 📊 Key Results
@@ -65,6 +65,7 @@ Superlet-MAE outperformed all baselines:
 Superlet-MAE/
 │
 ├── data/
+│   ├── __init__.py
 │   ├── data_loader.py          # EEG dataset loader
 │   ├── morlet.py               # Morlet wavelet utilities
 │   ├── preprocess.py           # Convert raw Sleep-EDF to .npz
@@ -76,10 +77,12 @@ Superlet-MAE/
 │   └── reconstruction.jpg      # Example reconstruction plot
 │
 ├── models/
+│   ├── __init__.py
 │   ├── model.py                # MAE (ViT backbone) implementation
 │   └── pos_embed.py            # Positional embedding functions
 │
 ├── training/
+│   ├── __init__.py
 │   ├── linear_probing.py       # Linear probing evaluation
 │   └── train.py                # MAE pretraining script
 │
@@ -99,7 +102,7 @@ $ pip install -r requirements.txt
 ## 🏃 Usage
 
 ### 1. Download Sleep EDF Dataset  
-Download the Sleep-EDF dataset (e.g., Fpz-Cz channel) from [PhysioNet](https://www.physionet.org/content/sleep-edfx/1.0.0/).
+Download the Sleep-EDF dataset from [PhysioNet](https://www.physionet.org/content/sleep-edfx/1.0.0/).
 
 ### 2. Preprocess raw EEG data  
 Use the preprocessing script to convert raw EDF files into NPZ format:
