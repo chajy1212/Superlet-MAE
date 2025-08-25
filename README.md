@@ -1,16 +1,14 @@
 # Superlet-MAE: Self-Supervised Masked Autoencoding for Sleep Staging Using Single-Channel EEG
 
+
 ## 🚀 Abstract
-Accurate sleep staging is crucial for diagnosing and treating sleep disorders.  
-However, manual scoring from polysomnography (PSG) remains costly, time-consuming, and subject to inter-rater variability.  
-
-We propose **_Superlet-MAE_**, a self-supervised learning framework that combines:  
-- **_Superlet Transform (SLT):_** a high-resolution time–frequency EEG representation, and  
-- **_Masked Autoencoder (MAE):_** a transformer-based encoder–decoder that learns robust latent features via masked reconstruction.  
-
-Trained on single-channel EEG (Fpz-Cz) from the Sleep-EDF dataset, our method achieves state-of-the-art performance, outperforming STFT/CWT baselines and prior SSL approaches.  
-
-***These findings highlight Superlet-MAE as a foundation framework for scalable sleep staging and broader biomedical signal analysis.***
+Sleep stage classification is critical for diagnosing sleep disorders, but traditional polysomnography (PSG) is time-consuming and labor-intensive and subject to inter-rater variability, limiting its reliability.
+In this study, we propose a self-supervised learning (SSL) framework that combines the Superlet Transform (SLT), which enables high-resolution time-frequency analysis, with a Masked Autoencoder (MAE) architecture.
+Single-channel EEG signals (i.e., Fpz-Cz) from the Sleep-EDF dataset were transformed into Superlet scalograms and used as MAE input.
+During training, 75% of the input patches were randomly masked, and reconstruction loss was computed only over the masked regions.
+The proposed model outperformed those using Short-Time Fourier Transform (STFT) and Continuous Wavelet Transform (CWT) inputs across all evaluation metrics—Accuracy (ACC): 75.87%, Macro F1 Score (MF1): 63.23%, and Cohen’s Kappa (Kappa): 0.64—and exceeded prior SSL methods by up to 6.6% in ACC.
+Reconstruction visualizations further confirmed that key EEG patterns were effectively recovered despite high masking.
+This study is the first to apply Superlet scalograms to MAE for EEG representation learning, demonstrating its potential for accurate sleep staging from unlabeled data.
 
 
 ## 📊 Key Results
