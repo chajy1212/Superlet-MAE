@@ -68,7 +68,7 @@ Superlet-MAE/
 │   ├── __init__.py
 │   ├── data_loader.py          # EEG dataset loader
 │   ├── morlet.py               # Morlet wavelet utilities
-│   ├── preprocess.py           # Convert raw Sleep-EDF to .npz
+│   ├── preprocess.py           # Convert raw Sleep-EDFX to .npz
 │   ├── superlet_transform.py   # Apply Superlet Transform
 │   └── superlets.py            # Superlet implementation
 │
@@ -101,8 +101,8 @@ $ pip install -r requirements.txt
 
 ## 🏃 Usage
 
-### 1. Download Sleep EDF Dataset  
-Download the Sleep-EDF dataset from [PhysioNet](https://www.physionet.org/content/sleep-edfx/1.0.0/).
+### 1. Download Sleep EDFX Dataset  
+Download the Sleep-EDFX dataset from [PhysioNet](https://www.physionet.org/content/sleep-edfx/1.0.0/).
 
 ### 2. Preprocess raw EEG data  
 Use the preprocessing script to convert raw EDF files into NPZ format:
