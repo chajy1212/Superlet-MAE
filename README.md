@@ -1,7 +1,5 @@
 # Superlet-MAE: Self-Supervised Masked Autoencoding for Sleep Staging Using Single-Channel EEG
 
----
-
 ## 🚀 Abstract
 Accurate sleep staging is crucial for diagnosing and treating sleep disorders.  
 However, manual scoring from polysomnography (PSG) remains costly, time-consuming, and subject to inter-rater variability.  
@@ -14,7 +12,6 @@ Trained on single-channel EEG (Fpz-Cz) from the Sleep-EDF dataset, our method ac
 
 ***These findings highlight Superlet-MAE as a foundation framework for scalable sleep staging and broader biomedical signal analysis.***
 
----
 
 ## 📊 Key Results
 
@@ -42,7 +39,6 @@ Superlet-MAE outperformed all baselines:
 - **+6.6%** higher ACC than **_TS-TCC_** 
 - **+5.14%** higher ACC than **_BENDR_**
 
----
 
 ## 📈 Visualization
 
@@ -53,11 +49,11 @@ Superlet-MAE outperformed all baselines:
 <p align="center">
   <em>Visualization of MAE reconstruction performance (mask ratio = 0.75). (A) original scalogram, (B) masked scalogram, (C) reconstructed scalogram.</em>
 </p>
----
 
 ## 📂 Repository Structure
 ```
 Superlet-MAE/
+│
 ├── data/
 │   ├── data_loader.py          # EEG dataset loader
 │   ├── morlet.py               # Morlet wavelet utilities
@@ -81,7 +77,6 @@ Superlet-MAE/
 └── README.md                   # Project documentation
 ```
 
----
 
 ## ⚙️ Installation
 ```
@@ -89,7 +84,7 @@ $ git clone https://github.com/chajy1212/Superlet-MAE.git
 $ cd Superlet-MAE
 $ pip install -r requirements.txt
 ```
----
+
 
 ## 🏃 Usage
 
@@ -121,10 +116,6 @@ Train a shallow classifier on the encoder’s latent features:
 python training/linear_probing.py
 ```
 
----
-
 ## 📌 Acknowledgements
 
 This work was supported by BK21 Four Institute of Precision Public Health.
-
----
