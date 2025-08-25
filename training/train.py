@@ -5,8 +5,8 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 from torch.utils.data import DataLoader
 
-from model import mae_vit_base_patch16
-from data_loader import SubjectEEGDataset
+from models.model import mae_vit_base_patch16
+from data.data_loader import SubjectEEGDataset
 
 from sklearn.model_selection import KFold
 from sklearn.neighbors import KNeighborsClassifier
