@@ -47,8 +47,10 @@ Superlet-MAE outperformed all baselines:
   <img src="./figures/reconstruction.jpg" width="900"/>
 </p>
 <p align="center">
-  <em>Visualization of MAE reconstruction performance (mask ratio = 0.75). (A) original scalogram, (B) masked scalogram, (C) reconstructed scalogram.</em>
+  <em>Visualization of MAE reconstruction performance (mask ratio = 0.75).<br>
+  (A) original scalogram, (B) masked scalogram, (C) reconstructed scalogram.</em>
 </p>
+
 
 ## 📂 Repository Structure
 ```
@@ -115,6 +117,7 @@ Train a shallow classifier on the encoder’s latent features:
 ```bash
 python training/linear_probing.py
 ```
+
 
 ## 📌 Acknowledgements
 
