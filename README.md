@@ -40,7 +40,7 @@ Superlet-MAE outperformed all baselines:
 
 ## 📈 Visualization
 
-### MAE Reconstruction
+### 🔹 MAE Reconstruction
 <p align="center">
   <img src="./figures/reconstruction.jpg" width="800"/>
 </p>
@@ -49,7 +49,7 @@ Superlet-MAE outperformed all baselines:
   (A) original scalogram, (B) masked scalogram, (C) reconstructed scalogram.</em>
 </p>
 
-### Sleep Stage Hypnogram
+### 🔹 Sleep Stage Hypnogram
 <p align="center">
   <img src="./figures/hypnogram.png" width="800"/>
 </p>
