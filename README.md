@@ -73,7 +73,7 @@ Superlet-MAE/
 │   └── superlets.py            # Superlet implementation
 │
 ├── figures/
-│   ├── hypnogram.jpg           # Example hypnogram plot
+│   ├── hypnogram.png           # Example hypnogram plot
 │   └── reconstruction.jpg      # Example reconstruction plot
 │
 ├── models/
