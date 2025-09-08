@@ -2,13 +2,12 @@
 
 
 ## 🚀 Abstract
-Sleep stage classification is critical for diagnosing sleep disorders, but traditional **_polysomnography (PSG)_** is time-consuming and labor-intensive and subject to inter-rater variability, limiting its reliability.
-In this study, we propose a **_self-supervised learning (SSL) framework_** that combines the **_Superlet Transform (SLT)_**, which enables high-resolution time-frequency analysis, with a **_Masked Autoencoder (MAE)_** architecture.
-Single-channel EEG signals (i.e., Fpz-Cz) from the Sleep-EDFX dataset were transformed into Superlet scalograms and used as MAE input.
-During training, 75% of the input patches were randomly masked, and reconstruction loss was computed only over the masked regions.
-The proposed model outperformed those using **_Short-Time Fourier Transform (STFT)_** and **_Continuous Wavelet Transform (CWT)_** inputs across all evaluation metrics—**_Accuracy (ACC): 75.87%, Macro F1 Score (MF1): 63.23%, and Cohen’s Kappa (Kappa): 0.64_**—and exceeded prior SSL methods by up to **_6.6% in ACC_**.
-Reconstruction visualizations further confirmed that key EEG patterns were effectively recovered despite high masking.
-This study is the **_first to apply Superlet scalograms to MAE_** for EEG representation learning, demonstrating its potential for accurate sleep staging from unlabeled data.
+Sleep stage classification is essential for diagnosing sleep disorders, but traditional polysomnography (PSG) is time-consuming and labor-intensive and subject to inter-rater variability, limiting its reliability.
+We propose a **_self-supervised learning (SSL) framework_** that integrates the **_Superlet Transform (SLT)_**, offering high-resolution time-frequency analysis, with a **_Masked Autoencoder (MAE)_** architecture.
+Single-channel EEG signals (i.e., Fpz-Cz) from the Sleep-EDF dataset were transformed into Superlet scalograms and used for masked reconstruction pretraining.
+Our method is the **_first to combine Superlet with MAE_** for EEG representation learning, enabling robust feature extraction from unlabeled data.
+Experimental results show that the proposed approach outperforms conventional transforms such as **_Short-Time Fourier Transform (STFT)_** and **_Continuous Wavelet Transform (CWT)_**, achieving state-of-the-art performance in sleep staging.
+These findings highlight the potential of Superlet-based SSL for scalable and accurate sleep analysis.
 
 
 ## 📊 Key Results
