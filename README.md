@@ -1,6 +1,7 @@
 # Superlet-MAE: Self-Supervised Masked Autoencoding for Sleep Staging Using Single-Channel EEG
 
 > Jeong-Yun Cha, Choel-Hui Lee, Hakseung Kim, and Dong-Joo Kim  
+> [Paper](https://ieeexplore.ieee.org/document/11388189)
 
 ## 🚀 Abstract
 Sleep stage classification is essential for diagnosing sleep disorders, but traditional polysomnography (PSG) is time-consuming and labor-intensive and subject to inter-rater variability, limiting its reliability.
